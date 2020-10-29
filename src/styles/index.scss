@@ -17,6 +17,11 @@ code {
 button {
   border: none;
   display: block;
+  cursor: grab;
+  user-select: none;
+}
+.button {
+  user-select: none;
 }
 
 /* METAL BRUSHES */
