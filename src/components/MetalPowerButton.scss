@@ -101,7 +101,7 @@
       #666666 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666',GradientType=1 );
-    background: linear-gradient(left, #666666 0%, #bbbbbb 50%, #666666 100%);
+    background: linear-gradient('to left', #666666 0%, #bbbbbb 50%, #666666 100%);
     box-shadow: #000 0px 0px 2px;
   }
   &:after {
