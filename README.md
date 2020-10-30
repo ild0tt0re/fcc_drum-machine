@@ -24,6 +24,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Bootstrap**: CSS framework
 - **Bootstrap Icons**: official bootstrap icons library
 - **SASS**: CSS pre-processors
+- **DSEG**: Font Family
+- **UI and Inspiration**: [Simurai](https://github.com/simurai)
 
 ## SUMMARY
 
