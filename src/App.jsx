@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import MetalDrumPad from './components/MetalDrumPad';
 import MetalPowerButton from './components/MetalPowerButton';
 import MetalSlider from './components/MetalSlider';
+import ProgressBar from './components/ProgressBar';
 import './styles/App.scss';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <MetalDrumPad />
       <MetalPowerButton />
       <MetalSlider />
+      <ProgressBar />
     </div>
   );
 }

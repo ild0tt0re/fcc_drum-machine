@@ -29,7 +29,7 @@ input[type='range'] {
   position: relative;
   margin: 20px;
   background-color: #000;
-  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   cursor: ew-resize;
@@ -44,7 +44,7 @@ input[type='range'] {
     background-color: hsl(0, 0%, 90%);
     background-image: $brushed-metal-radial;
     box-shadow: -0.125em 0.125em 0.125em #6a6a6a;
-    cursor: pointer; /* Cursor on hover */
+    cursor: ew-resize; /* Cursor on hover */
   }
 
   &::-moz-range-thumb {
@@ -70,6 +70,6 @@ input[type='range'] {
       color-stop(1, hsl(200, 80%, 45%))
     );
 
-    -webkit-box-shadow: inset #000 1px 1px 1px, inset #000 -1px -1px 1px;
+    box-shadow: inset #000 1px 1px 1px, inset #000 -1px -1px 1px;
   }
 }
