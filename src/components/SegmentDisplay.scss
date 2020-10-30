@@ -1,0 +1,50 @@
+.D7M {
+  font-family: 'DSEG7-Modern';
+}
+.D14M {
+  font-family: 'DSEG14-Modern';
+}
+
+.Clock-Wrapper {
+  position: relative;
+  border: 6px solid #000;
+  border-radius: 9px;
+  height: 143px;
+  width: 326px;
+  background-color: var(--bs-info);
+  box-shadow: 4px 4px 1px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.Clock-Time-Background {
+  z-index: 50;
+  position: absolute;
+  top: 70px;
+  left: 6px;
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 40px;
+}
+
+.Clock-Time-Front {
+  z-index: 100;
+  position: absolute;
+  top: 70px;
+  left: 6px;
+  font-size: 40px;
+}
+
+.Clock-Year-Background {
+  z-index: 50;
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 27px;
+}
+
+.Clock-Year-Front {
+  z-index: 100;
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  font-size: 27px;
+}
