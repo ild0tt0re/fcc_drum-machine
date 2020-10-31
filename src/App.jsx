@@ -13,7 +13,7 @@ function App() {
   const [clipName, setClipName] = useState('Drum!box');
   const [volume, setVolume] = useState(92);
   const [selectedBank, setBank] = useState(bankOne);
-  const [power, setPower] = useState(1);
+  const [power, setPower] = useState(true);
 
   useEffect(() => {}, []);
 
@@ -25,12 +25,16 @@ function App() {
     setVolume(volume);
   };
 
+  const handlePower = (isOn) => {
+    setPower(!isOn);
+  };
+
   return (
     <div className="App vh-100">
       <main className="h-100 d-flex justify-content-center align-items-center">
         <div id="drum-machine" className="container drum-pads-container">
           <div className="row row-cols-2 justify-content-center align-items-center">
-            <div className="drum-left">
+            <div className="drum-left order-last order-lg-first">
               <div className="row row-cols-3">
                 {bankOne.map((currentPad) => (
                   <div key={currentPad.keyTrigger} className="col">
@@ -48,7 +52,7 @@ function App() {
             </div>
 
             <div className="drum-right ml-4">
-              <div className="row align-items-center justify-content-center">
+              <div className="row align-items-center justify-content-center mb-3">
                 <div className="col-8">
                   <h3>DSEG7-Modern</h3>
                   <p style={{ fontFamily: 'DSEG7-Modern' }}>
@@ -58,8 +62,8 @@ function App() {
                     <br />
                   </p>
                 </div>
-                <div className="col-4">
-                  <MetalPowerButton />
+                <div className="col-4 position-relative">
+                  <MetalPowerButton isOn={power} handlePower={handlePower} />
                 </div>
               </div>
               <div className="row align-items-center justify-content-center">
@@ -72,7 +76,10 @@ function App() {
               </div>
               <div className="row mt-2">
                 <div className="col">
-                  <MetalSlider volume={volume} handleVolumeChange={handleVolumeChange} />
+                  <MetalSlider
+                    volume={volume}
+                    handleVolumeChange={handleVolumeChange}
+                  />
                 </div>
               </div>
             </div>
