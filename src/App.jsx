@@ -56,7 +56,7 @@ function App() {
             <div className="drum-right ml-4">
               <div className="row align-items-center justify-content-center mb-3">
                 <div className="col-8">
-                  <h3>DSEG7-Modern</h3>
+                  <h3>DRUM7-Machine</h3>
                   <p style={{ fontFamily: 'DSEG7-Modern' }}>
                     <span style={{ fontWeight: 200 }}>123abc</span>
                     <span style={{ fontWeight: 'normal' }}>123abc</span>
