@@ -31,7 +31,8 @@ button {
   transition: color 0.2s;
 }
 
-.metal:active {
+.metal:active,
+.metal.active {
   color: hsl(210, 100%, 40%);
   text-shadow: hsla(210, 100%, 20%, 0.3) 0 -1px 0, hsl(210, 100%, 85%) 0 2px 1px,
     hsla(200, 100%, 80%, 1) 0 0 5px, hsla(210, 100%, 50%, 0.6) 0 0 20px;

@@ -9,6 +9,7 @@ export default function MetalDrumPad({
   handleDrumPadPress,
 }) {
   const audioEl = useRef(null);
+  const padEl = useRef(null);
   useEffect(() => {
     document.addEventListener('keydown', handleKeyPress);
     return () => {
@@ -17,11 +18,20 @@ export default function MetalDrumPad({
   }, []);
 
   useEffect(() => {
-    debugger
-    if (audioEl.current) audioEl.current.volume = volume/100;
+    if (audioEl.current) audioEl.current.volume = volume / 100;
   }, [volume]);
 
+  const setPadActive = (classes) => {
+    padEl.current.classList.add('active');
+  };
+
+  const removePadActive = (classes) => {
+    padEl.current.classList.remove('active');
+  };
+
   const handlePadClick = (e) => {
+    setPadActive();
+    setTimeout(removePadActive, 90);
     handleDrumPadPress(idClip);
     audioEl.current.play();
   };
@@ -34,7 +44,7 @@ export default function MetalDrumPad({
 
   return (
     <div id={idClip} className="drum-pad">
-      <button className="metal radial" onClick={handlePadClick}>
+      <button ref={padEl} className="metal radial" onClick={handlePadClick}>
         {character}
       </button>
       <audio id={character} ref={audioEl} className="clip" src={audioClip} />

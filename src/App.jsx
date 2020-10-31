@@ -11,7 +11,7 @@ const bankTwo = getBankTwo();
 
 function App() {
   const [clipName, setClipName] = useState('Drum!box');
-  const [volume, setVolume] = useState(64);
+  const [volume, setVolume] = useState(92);
   const [selectedBank, setBank] = useState(bankOne);
   const [power, setPower] = useState(1);
 
@@ -72,7 +72,7 @@ function App() {
               </div>
               <div className="row mt-2">
                 <div className="col">
-                  <MetalSlider handleVolumeChange={handleVolumeChange} />
+                  <MetalSlider volume={volume} handleVolumeChange={handleVolumeChange} />
                 </div>
               </div>
             </div>
