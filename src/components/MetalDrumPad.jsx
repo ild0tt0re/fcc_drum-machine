@@ -44,13 +44,8 @@ export default function MetalDrumPad({
   }
 
   return (
-    <div id={idClip} className="drum-pad">
-      <button
-        ref={padEl}
-        className="metal radial"
-        onClick={handlePadClick}
-        disabled={!powerState}
-      >
+    <div id={idClip} className="drum-pad" onClick={handlePadClick}>
+      <button ref={padEl} className="metal radial" disabled={!powerState}>
         {character}
       </button>
       <audio id={character} ref={audioEl} className="clip" src={audioClip} />
