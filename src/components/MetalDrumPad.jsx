@@ -6,6 +6,7 @@ export default function MetalDrumPad({
   audioClip,
   idClip,
   volume,
+  powerState,
   handleDrumPadPress,
 }) {
   const audioEl = useRef(null);
@@ -15,7 +16,7 @@ export default function MetalDrumPad({
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [handleKeyPress]);
 
   useEffect(() => {
     if (audioEl.current) audioEl.current.volume = volume / 100;
@@ -37,14 +38,19 @@ export default function MetalDrumPad({
   };
 
   function handleKeyPress(e) {
-    if (e.code === `Key${character}`) {
+    if (e.code === `Key${character}` && powerState) {
       handlePadClick();
     }
   }
 
   return (
     <div id={idClip} className="drum-pad">
-      <button ref={padEl} className="metal radial" onClick={handlePadClick}>
+      <button
+        ref={padEl}
+        className="metal radial"
+        onClick={handlePadClick}
+        disabled={!powerState}
+      >
         {character}
       </button>
       <audio id={character} ref={audioEl} className="clip" src={audioClip} />

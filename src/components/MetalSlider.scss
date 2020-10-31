@@ -58,7 +58,7 @@ input[type='range'] {
     cursor: pointer; /* Cursor on hover */
   }
 
-  &:hover {
+  &.active {
     background-image: -webkit-gradient(
       linear,
       left top,

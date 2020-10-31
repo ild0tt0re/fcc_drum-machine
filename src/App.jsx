@@ -8,11 +8,12 @@ import './styles/App.scss';
 
 const bankOne = getBankOne();
 const bankTwo = getBankTwo();
+const initialVolumeState = 92
 
 function App() {
-  const [clipName, setClipName] = useState('Welcome');
-  const [volume, setVolume] = useState(92);
   const [selectedBank, setBank] = useState(bankOne);
+  const [clipName, setClipName] = useState('Welcome');
+  const [volume, setVolume] = useState(initialVolumeState);
   const [power, setPower] = useState(true);
 
   useEffect(() => {}, []);
@@ -29,6 +30,13 @@ function App() {
     const togglePowerState = !isOn;
     setPower(togglePowerState);
     setClipName(togglePowerState ? 'POWER-ON' : 'POWER-OFF');
+    setTimeout(setClipName, 1000, '')
+
+    if (!togglePowerState) {
+      setVolume(0);
+    } else {
+      setVolume(initialVolumeState);
+    }
   };
 
   return (
@@ -46,6 +54,7 @@ function App() {
                       charCode={currentPad.keyCode}
                       idClip={currentPad.id}
                       volume={volume}
+                      powerState={power}
                       handleDrumPadPress={handleDrumPadPress}
                     />
                   </div>
@@ -70,7 +79,7 @@ function App() {
               </div>
               <div className="row align-items-center justify-content-center">
                 <div className="col-10">
-                  <SegmentDisplay clipName={clipName} volume={volume} />
+                  <SegmentDisplay clipName={clipName} volume={volume} powerState={power} />
                 </div>
                 <div className="col-2">
                   <ProgressBar volume={volume} />
@@ -80,6 +89,7 @@ function App() {
                 <div className="col">
                   <MetalSlider
                     volume={volume}
+                    powerState={power}
                     handleVolumeChange={handleVolumeChange}
                   />
                 </div>
