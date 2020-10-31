@@ -7,6 +7,7 @@ progress {
   padding: 4px;
   background: #000;
   box-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.1);
+  transform: rotate(-90deg) translate(-17px, -87px);
 
   -webkit-box-reflect: below -3px -webkit-radial-gradient(
       50% 70%,
@@ -34,10 +35,4 @@ progress {
     box-shadow: 0 0 10px 2px hsla(200, 100%, 50%, 0.4);
     transition: width 1s cubic-bezier(0.2, 0.1, 0.2, 1);
   }
-
-  // &:hover::-webkit-progress-value {
-  //   /*In the real world, just change the element's value, this is just a hack for this demo.*/
-  //   width: 100% !important;
-  //   transition: width 0.3s cubic-bezier(0.2, 0.1, 0.2, 1);
-  // }
 }

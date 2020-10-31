@@ -1,8 +1,8 @@
 import React from 'react'
 import './ProgressBar.scss'
 
-export default function ProgressBar() {
+export default function ProgressBar({volume}) {
     return (
-        <progress value="0.3"></progress>
+        <progress value={volume/100}></progress>
     )
 }

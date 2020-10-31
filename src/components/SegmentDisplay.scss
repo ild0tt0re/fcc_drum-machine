@@ -5,46 +5,46 @@
   font-family: 'DSEG14-Modern';
 }
 
-.Clock-Wrapper {
+.display-wrapper {
   position: relative;
   border: 6px solid #000;
   border-radius: 9px;
-  height: 143px;
-  width: 326px;
+  height: 123px;
+  width: 266px;
   background-color: var(--bs-info);
   box-shadow: 4px 4px 1px 0px rgba(0, 0, 0, 0.1) inset;
 }
 
-.Clock-Time-Background {
-  z-index: 50;
-  position: absolute;
-  top: 70px;
-  left: 6px;
-  color: rgba(0, 0, 0, 0.15);
-  font-size: 40px;
-}
-
-.Clock-Time-Front {
-  z-index: 100;
-  position: absolute;
-  top: 70px;
-  left: 6px;
-  font-size: 40px;
-}
-
-.Clock-Year-Background {
+.display-head-bg {
   z-index: 50;
   position: absolute;
   top: 13px;
   left: 6px;
   color: rgba(0, 0, 0, 0.1);
-  font-size: 27px;
+  font-size: 22px;
 }
 
-.Clock-Year-Front {
+.display-head-front {
   z-index: 100;
   position: absolute;
   top: 13px;
   left: 6px;
-  font-size: 27px;
+  font-size: 22px;
+}
+
+.display-bottom-bg {
+  z-index: 50;
+  position: absolute;
+  top: 60px;
+  left: 6px;
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 33px;
+}
+
+.display-bottom-front {
+  z-index: 100;
+  position: absolute;
+  top: 60px;
+  left: 6px;
+  font-size: 33px;
 }
