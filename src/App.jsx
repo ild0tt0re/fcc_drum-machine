@@ -10,7 +10,7 @@ const bankOne = getBankOne();
 const bankTwo = getBankTwo();
 
 function App() {
-  const [clipName, setClipName] = useState('Drum!box');
+  const [clipName, setClipName] = useState('Welcome');
   const [volume, setVolume] = useState(92);
   const [selectedBank, setBank] = useState(bankOne);
   const [power, setPower] = useState(true);
@@ -26,7 +26,9 @@ function App() {
   };
 
   const handlePower = (isOn) => {
-    setPower(!isOn);
+    const togglePowerState = !isOn;
+    setPower(togglePowerState);
+    setClipName(togglePowerState ? 'POWER-ON' : 'POWER-OFF');
   };
 
   return (
