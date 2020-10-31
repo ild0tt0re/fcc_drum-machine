@@ -4,7 +4,6 @@ import './SegmentDisplay.scss';
 export default function SegmentDisplay({ clipName, volume, powerState }) {
   const [isActive, setIsActive] = useState(powerState);
   useEffect(() => {
-    debugger;
     if (!powerState) {
       setTimeout(setIsActive, 1000, false);
     } else {

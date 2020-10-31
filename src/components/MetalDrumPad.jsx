@@ -37,6 +37,7 @@ export default function MetalDrumPad({
     audioEl.current.play();
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function handleKeyPress(e) {
     if (e.code === `Key${character}` && powerState) {
       handlePadClick();

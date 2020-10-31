@@ -11,7 +11,7 @@ const bankTwo = getBankTwo();
 const initialVolumeState = 92
 
 function App() {
-  const [selectedBank, setBank] = useState(bankOne);
+  const [selectedBank/* , setBank */] = useState(bankOne || bankTwo);
   const [clipName, setClipName] = useState('Welcome');
   const [volume, setVolume] = useState(initialVolumeState);
   const [power, setPower] = useState(true);
@@ -46,7 +46,7 @@ function App() {
           <div className="row row-cols-2 justify-content-center align-items-center">
             <div className="drum-left order-last order-lg-first">
               <div className="row row-cols-3">
-                {bankOne.map((currentPad) => (
+                {selectedBank.map((currentPad) => (
                   <div key={currentPad.keyTrigger} className="col">
                     <MetalDrumPad
                       character={currentPad.keyTrigger}
